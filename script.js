@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
             charIndex++;
             // Slightly varied speed for realism
             setTimeout(typeChar, Math.random() * 50 + 50);
+        } else {
+            // Hide cursor after typing is complete
+            const cursor = document.querySelector('.cursor');
+            if (cursor) cursor.style.display = 'none';
         }
     }
 
